@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="">
+
+  <!-- Add your site or application content here -->
+
+
+  <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 absolute
+  top-2 right-2 w-60 opacity-90 z-10">
+
+    <div class="p-5 b-2">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">control panel</h5>
+      <h5 class="mb-2 text-2xs font-bold tracking-tight text-gray-900 dark:text-white">state of game: <span
+          id="gamestate"></span></h5>
+
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="button_action.startpause()" id="startpausebutton"
+          class="rounded-full bg-blue-500 bottom-px hover:bg-blue-700 text-white font-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+        <button onclick="button_action.nextstate()" id="resetbutton"
+          class="bg-blue-500 bottom-px hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          nextstate
+        </button>
+        <label for="medium-range" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300">speed: <span
+            id="speed">0</span></label>
+        <input id="speed-range" type="range" value="50"
+          class="mb-6 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+      </div>
+      <p class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-300"> generation: <span
+          id="generation">0</span></p>
+    </div>
+  </div>
+  <canvas class="" id="canvas"></canvas>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
